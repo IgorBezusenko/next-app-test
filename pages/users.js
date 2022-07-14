@@ -12,7 +12,7 @@ const Users = ({users}) => {
                     users.map(item => {
                         return (
                             <li key={item.id}>
-                                <A href={"/users/" + item.id} text={item.name}/>
+                                <A href={"/users/" + item.id} >{item.name}</A>
                             </li>
                         )
                     })
