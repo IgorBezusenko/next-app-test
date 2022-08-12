@@ -5,15 +5,21 @@ import foto from "./1.jpeg"
 function Nav(props) {
     return (
         <div className={"navbar"}>
-            <A href={"/"} >Main page<Image src={foto} width={50} height={50}/>
+
+            <A href={"/"} > <Image src={foto} width={25} height={25}/>  Main page
             </A>
-            <A href={"/users"}>Users page</A>
+            <A href={"/users"}>Users</A>
+            <A href={"/posts"}>Posts</A>
+            <A href={"/todos"}>Todos</A>
+            <A href={"/albums"}>Albums</A>
+            <A href={"/lof"}>Error page</A>
             <style jsx>
                 {`
                   .navbar {
-                    background-color: bisque;
+                    background-color: #4a3f32;
                     color: white;
                     padding: 20px;
+                    margin-bottom: 20px;
                   }
                 `
                 }

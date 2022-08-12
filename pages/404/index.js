@@ -1,4 +1,4 @@
-import A from "../components/A";
+import A from "../../components/A";
 
 export default function Error() {
     return <>

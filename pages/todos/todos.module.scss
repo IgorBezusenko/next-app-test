@@ -1,0 +1,15 @@
+.todos{
+  flex-basis: 300px;
+  height: auto;
+  padding: 20px;
+  margin: 0 10px 10px 0;
+  border-radius: 15px;
+  background-color: antiquewhite;
+
+  &__container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
