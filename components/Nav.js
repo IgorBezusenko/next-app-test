@@ -11,6 +11,7 @@ function Nav(props) {
             <A href={"/users"}>Users</A>
             <A href={"/posts"}>Posts</A>
             <A href={"/todos"}>Todos</A>
+            <A href={"/articles"}>Articles</A>
             <A href={"/albums"}>Albums</A>
             <A href={"/lof"}>Error page</A>
             <style jsx>

@@ -14,7 +14,7 @@ function MainContainer({title, keywords, children}) {
                 <title>{title}</title>
             </Head>
             <Nav/>
-            <div>
+            <div >
                 {children}
             </div>
         </>
