@@ -1,9 +1,11 @@
 import MainContainer from "../../components/MainContainer";
 import {UserAlbum} from "../../components/user/UserAlbum";
 
+
 const Albums = ({albums}) => {
     return (<MainContainer title={"Albums"}>
         <h2> Albums </h2>
+
         {
             albums?.map(item => <UserAlbum key={item.id} id={item.id} title={item.title}/>)
         }
