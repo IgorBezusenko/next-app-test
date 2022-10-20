@@ -23,9 +23,9 @@ const fontNameToolSettings = {
     items: [...fonts],
 };
 
-console.log({EditorTools})
-console.log("fontNameToolSettings", fontNameToolSettings)
-console.log({EditorToolsSettings})
+// console.log({EditorTools})
+// console.log("fontNameToolSettings", fontNameToolSettings)
+// console.log({EditorToolsSettings})
 
 const WrapperFontName =
     EditorTools.createStyleDropDownList(fontNameToolSettings); // Styles the FontSize tool (DropDownList).
