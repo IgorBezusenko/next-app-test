@@ -3,15 +3,15 @@ import {EditorComponent} from "../../components/editor";
 // import "@progress/kendo-theme-default/dist/all.css";
 import css from "./articles.module.scss"
 import MainContainer from "../../components/MainContainer";
-export default function Articles({articles}) {
-    const data = articles?.data?.attributes?.content
-    console.log("Articles",articles,data)
+import StrapiMenu from "../../components/menus/strapi-menu";
+export default function Articles({articles,menus}) {
     return (
         <MainContainer title={"Articles"}>
-            <h1>Articles</h1>
+            <StrapiMenu menus={menus} />
+            <h2>Articles</h2>
             {/*<EditorComponent/>*/}
             {
-                articles?.data.map(item =>
+                articles?.data?.map(item =>
                     <div className={css.article} key={item.id}>
                         <h2>{item?.attributes?.title}</h2>
                         <div  dangerouslySetInnerHTML={{__html: item?.attributes?.content}}/>
@@ -25,9 +25,14 @@ export default function Articles({articles}) {
 };
 
 export async function getStaticProps(context) {
-    const res = await fetch('http://localhost:1337/api/artticles')
-    const articles = await res.json()
+    const res1 = await fetch('http://localhost:1337/api/menus?populate=*');
+    const menus = await res1.json();
+
+    const res2 = await fetch('http://localhost:1337/api/articles')
+    const articles = await res2.json()
+
+
     return {
-        props: {articles}, // will be passed to the page component as props
+        props: {articles,menus}, // will be passed to the page component as props
     }
 }

@@ -9,7 +9,7 @@ function Nav(props) {
             <A href={"/"} > <Image src={foto} width={25} height={25}/>  Main page
             </A>
             <A href={"/users"}>Users</A>
-            <A href={"/strapi-menu"}>StrapiMenu</A>
+            {/*<A href={"/strapi-menu"}>StrapiMenu</A>*/}
             <A href={"/posts"}>Posts</A>
             <A href={"/todos"}>Todos</A>
             <A href={"/articles"}>Articles</A>

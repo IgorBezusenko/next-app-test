@@ -1,32 +1,30 @@
 import MainContainer from "../../../components/MainContainer";
 import UserNav from "../../../components/user/UserNav";
 import UserProfile from "../../../components/user/UsereProfile";
+import React from "react";
 
 // import css from "../user.module.scss"
 
-export default function StrapiArticles({ slug}) {
+export default function StrapiArticles({article}) {
 
-    // console.log("user", { slug})
+    // console.log("article", {article})
     return (
         <MainContainer title={"StrapiArticles"}>
             <div className={""}>
-                <h2>article</h2>
-                {/*<UserNav slug={slug}/>*/}
-                {/*<UserProfile id={article.id}*/}
-                {/*             name={article.name}*/}
-                {/*             username={article.content}*/}
-                {/*/>*/}
+                <h2>{article?.attributes?.title}</h2>
+                <div  dangerouslySetInnerHTML={{__html: article?.attributes?.content}}/>
             </div>
         </MainContainer>
     )
 }
 
 export async function getServerSideProps({params}) {
-    // const res = await fetch(`http://localhost:1337/api/article`)
-    // const article = await res.json()
+    const res = await fetch(`http://localhost:1337/api/articles?filters[slug][$eq]=${params.slug}`)
+    const articles = await res.json()
     return {
         props: {
-             slug: params.id
+            // params
+            article:articles.data[0]
         }, // will be passed to the page component as props
     }
 }
