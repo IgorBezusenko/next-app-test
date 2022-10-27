@@ -1,10 +1,11 @@
 import React from 'react';
 import {EditorComponent} from "../../components/editor";
-// import "@progress/kendo-theme-default/dist/all.css";
 import css from "./articles.module.scss"
 import MainContainer from "../../components/MainContainer";
 import StrapiMenu from "../../components/menus/strapi-menu";
+
 export default function Articles({articles,menus}) {
+    console.log("asds")
     return (
         <MainContainer title={"Articles"}>
             <StrapiMenu menus={menus} />
@@ -16,7 +17,8 @@ export default function Articles({articles,menus}) {
                         <h2>{item?.attributes?.title}</h2>
                         <div  dangerouslySetInnerHTML={{__html: item?.attributes?.content}}/>
                     </div>
-                )}
+                )
+            }
 
         </MainContainer>
 

@@ -1,17 +1,18 @@
 import A from "../A";
-import MainContainer from "../MainContainer";
-import React from "react";
-
-export const MenuItems = (props)=>{
-    return(
-        <ul>
-            {props?.menuItems?.map((item,index)=>{
-                return(
-                    <li key={index}>
-                        <A href={"articles"+item.attributes.url}>{item.attributes.title}</A>
-                    </li>
-                )
-            })}
-        </ul>
+import css from "./menu.module.scss"
+export const MenuItems = ({menuItems,menuClose}) => {
+    return (
+        <>
+            <div className={css.menuItems__bg} onClick={menuClose}></div>
+            <ul className={css.menuItems}>
+                {menuItems?.map((item, index) => {
+                    return (
+                        <li key={index}>
+                            <A href={"articles" + item.attributes.url}>{item.attributes.title}</A>
+                        </li>
+                    )
+                })}
+            </ul>
+        </>
     )
 }
