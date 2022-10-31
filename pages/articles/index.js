@@ -3,12 +3,14 @@ import {EditorComponent} from "../../components/editor";
 import css from "./articles.module.scss"
 import MainContainer from "../../components/MainContainer";
 import StrapiMenu from "../../components/menus/strapi-menu";
+import {KendoMenu} from "../../components/menus/kendo/kendo-menu";
 
 export default function Articles({articles,menus}) {
     console.log("asds")
     return (
         <MainContainer title={"Articles"}>
             <StrapiMenu menus={menus} />
+            <KendoMenu menus={menus}/>
             <h2>Articles</h2>
             {/*<EditorComponent/>*/}
             {

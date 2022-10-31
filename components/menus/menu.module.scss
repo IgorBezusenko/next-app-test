@@ -1,29 +1,33 @@
 .menus {
   font-size: 14px;
-  margin:  0 0 20px 0;
+  margin: 0 0 20px 0;
   padding: 0 20px;
   background-color: #a7a7a7;
+  color: #000;
 
   &__content {
     display: flex;
     gap: 20px;
   }
 
-  &__item{
+  &__item {
     position: relative;
     //z-index: 3;
-&:hover{
+    &:hover {
 
-}
+    }
   }
 
-  &__title{
+  &__title {
     cursor: pointer;
   }
 
 
+
+
 }
-.menuItems{
+
+.menuItems {
 
   width: 100%;
   background-color: #f4fff5;
@@ -31,13 +35,14 @@
   top: 27px;
   left: 0;
   z-index: 2;
-  a{
+
+  a {
     cursor: pointer;
     color: black;
   }
 
 
-  &__bg{
+  &__bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -48,3 +53,4 @@
     z-index: 1;
   }
 }
+

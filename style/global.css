@@ -12,3 +12,7 @@ body {
 li {
     list-style: none;
 }
+
+.k-item span {
+    color:#000 ;
+}

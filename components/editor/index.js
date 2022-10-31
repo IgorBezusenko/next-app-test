@@ -54,16 +54,7 @@ const {
 } = EditorTools;
 
 const styles = `
-    .k-content {
-      font-size: 24px;
-      color: #92400E;
-    }
-    p {
-        color: #53d2fa;
-    }
-    h1 {
-        color:red;
-    }
+
 `;
 
 
